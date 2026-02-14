@@ -1,0 +1,43 @@
+// Prisma Schema for African AI Talent Board
+// Database: PostgreSQL
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+
+
+model Talent {
+  id              Int              @id @default(autoincrement())
+  name            String
+  email           String           @unique
+  skills          String           // JSON string of skills for flexible matching
+  hourlyRate      Float
+  experienceLevel String
+  availability    Boolean          @default(true)
+  createdAt       DateTime         @default(now())
+  updatedAt       DateTime         @updatedAt
+
+  @@index([experienceLevel])
+  @@index([availability])
+  @@map("talents")
+}
+
+model Job {
+  id                        Int              @id @default(autoincrement())
+  title                     String
+  description               String
+  requiredSkills            String           // JSON string of required skills
+  budgetMax                 Float
+  preferredExperienceLevel  String
+  createdAt                 DateTime         @default(now())
+  updatedAt                 DateTime         @updatedAt
+
+  @@index([preferredExperienceLevel])
+  @@map("jobs")
+}

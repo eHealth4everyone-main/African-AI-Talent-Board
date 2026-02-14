@@ -1,0 +1,86 @@
+2026-02-14 10:14:28 [error]: Error: Route /favicon.ico not found
+    at notFoundHandler (file:///C:/Users/HOME%20PRO/Desktop/African-AI-Talent-Board-main/src/middleware/error.middleware.js:76:19)
+    at Layer.handle [as handle_request] (C:\Users\HOME PRO\Desktop\African-AI-Talent-Board-main\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\HOME PRO\Desktop\African-AI-Talent-Board-main\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\HOME PRO\Desktop\African-AI-Talent-Board-main\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\HOME PRO\Desktop\African-AI-Talent-Board-main\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\HOME PRO\Desktop\African-AI-Talent-Board-main\node_modules\express\lib\router\index.js:280:10)
+    at file:///C:/Users/HOME%20PRO/Desktop/African-AI-Talent-Board-main/src/server.js:54:5
+    at Layer.handle [as handle_request] (C:\Users\HOME PRO\Desktop\African-AI-Talent-Board-main\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\HOME PRO\Desktop\African-AI-Talent-Board-main\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\HOME PRO\Desktop\African-AI-Talent-Board-main\node_modules\express\lib\router\index.js:286:9
+2026-02-14 10:15:07 [error]: Error: Route /.well-known/appspecific/com.chrome.devtools.json not found
+    at notFoundHandler (file:///C:/Users/HOME%20PRO/Desktop/African-AI-Talent-Board-main/src/middleware/error.middleware.js:76:19)
+    at Layer.handle [as handle_request] (C:\Users\HOME PRO\Desktop\African-AI-Talent-Board-main\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\HOME PRO\Desktop\African-AI-Talent-Board-main\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\HOME PRO\Desktop\African-AI-Talent-Board-main\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\HOME PRO\Desktop\African-AI-Talent-Board-main\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\HOME PRO\Desktop\African-AI-Talent-Board-main\node_modules\express\lib\router\index.js:280:10)
+    at file:///C:/Users/HOME%20PRO/Desktop/African-AI-Talent-Board-main/src/server.js:54:5
+    at Layer.handle [as handle_request] (C:\Users\HOME PRO\Desktop\African-AI-Talent-Board-main\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\HOME PRO\Desktop\African-AI-Talent-Board-main\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\HOME PRO\Desktop\African-AI-Talent-Board-main\node_modules\express\lib\router\index.js:286:9
+2026-02-14 10:16:59 [error]: PrismaClientInitializationError: 
+Invalid `prisma.talent.findMany()` invocation:
+
+
+error: Environment variable not found: DATABASE_URL.
+  -->  schema.prisma:10
+   | 
+ 9 |   provider = "sqlite"
+10 |   url      = env("DATABASE_URL")
+   | 
+
+Validation Error Count: 1
+    at $n.handleRequestError (C:\Users\HOME PRO\Desktop\African-AI-Talent-Board-main\node_modules\@prisma\client\runtime\library.js:121:7615)
+    at $n.handleAndLogRequestError (C:\Users\HOME PRO\Desktop\African-AI-Talent-Board-main\node_modules\@prisma\client\runtime\library.js:121:6623)
+    at $n.request (C:\Users\HOME PRO\Desktop\African-AI-Talent-Board-main\node_modules\@prisma\client\runtime\library.js:121:6307)
+    at async l (C:\Users\HOME PRO\Desktop\African-AI-Talent-Board-main\node_modules\@prisma\client\runtime\library.js:130:9633)
+    at async TalentRepository.findAll (file:///C:/Users/HOME%20PRO/Desktop/African-AI-Talent-Board-main/src/repositories/talent_repository.js:55:16)
+    at async TalentService.getAllTalents (file:///C:/Users/HOME%20PRO/Desktop/African-AI-Talent-Board-main/src/services/talent_service.js:50:25)
+    at async TalentController.getAllTalents (file:///C:/Users/HOME%20PRO/Desktop/African-AI-Talent-Board-main/src/controllers/talent_controller.js:45:29)
+2026-02-14 10:18:26 [error]: PrismaClientInitializationError: 
+Invalid `prisma.talent.findUnique()` invocation:
+
+
+error: Environment variable not found: DATABASE_URL.
+  -->  schema.prisma:10
+   | 
+ 9 |   provider = "sqlite"
+10 |   url      = env("DATABASE_URL")
+   | 
+
+Validation Error Count: 1
+    at $n.handleRequestError (C:\Users\HOME PRO\Desktop\African-AI-Talent-Board-main\node_modules\@prisma\client\runtime\library.js:121:7615)
+    at $n.handleAndLogRequestError (C:\Users\HOME PRO\Desktop\African-AI-Talent-Board-main\node_modules\@prisma\client\runtime\library.js:121:6623)
+    at $n.request (C:\Users\HOME PRO\Desktop\African-AI-Talent-Board-main\node_modules\@prisma\client\runtime\library.js:121:6307)
+    at async l (C:\Users\HOME PRO\Desktop\African-AI-Talent-Board-main\node_modules\@prisma\client\runtime\library.js:130:9633)
+    at async TalentRepository.findByEmail (file:///C:/Users/HOME%20PRO/Desktop/African-AI-Talent-Board-main/src/repositories/talent_repository.js:30:16)
+    at async TalentService.createTalent (file:///C:/Users/HOME%20PRO/Desktop/African-AI-Talent-Board-main/src/services/talent_service.js:16:32)
+    at async TalentController.createTalent (file:///C:/Users/HOME%20PRO/Desktop/African-AI-Talent-Board-main/src/controllers/talent_controller.js:15:28)
+2026-02-14 10:21:03 [error]: PrismaClientInitializationError: 
+Invalid `prisma.talent.findUnique()` invocation:
+
+
+Error querying the database: Error code 14: Unable to open the database file
+    at $n.handleRequestError (C:\Users\HOME PRO\Desktop\African-AI-Talent-Board-main\node_modules\@prisma\client\runtime\library.js:121:7615)
+    at $n.handleAndLogRequestError (C:\Users\HOME PRO\Desktop\African-AI-Talent-Board-main\node_modules\@prisma\client\runtime\library.js:121:6623)
+    at $n.request (C:\Users\HOME PRO\Desktop\African-AI-Talent-Board-main\node_modules\@prisma\client\runtime\library.js:121:6307)
+    at async l (C:\Users\HOME PRO\Desktop\African-AI-Talent-Board-main\node_modules\@prisma\client\runtime\library.js:130:9633)
+    at async TalentRepository.findByEmail (file:///C:/Users/HOME%20PRO/Desktop/African-AI-Talent-Board-main/src/repositories/talent_repository.js:30:16)
+    at async TalentService.createTalent (file:///C:/Users/HOME%20PRO/Desktop/African-AI-Talent-Board-main/src/services/talent_service.js:16:32)
+    at async TalentController.createTalent (file:///C:/Users/HOME%20PRO/Desktop/African-AI-Talent-Board-main/src/controllers/talent_controller.js:15:28)
+2026-02-14 10:33:06 [error]: Error: Talent with this email already exists
+    at TalentService.createTalent (file:///C:/Users/HOME%20PRO/Desktop/African-AI-Talent-Board-main/src/services/talent_service.js:18:19)
+    at async TalentController.createTalent (file:///C:/Users/HOME%20PRO/Desktop/African-AI-Talent-Board-main/src/controllers/talent_controller.js:15:28)
+2026-02-14 10:37:12 [error]: Error: Route /.well-known/appspecific/com.chrome.devtools.json not found
+    at notFoundHandler (file:///C:/Users/HOME%20PRO/Desktop/African-AI-Talent-Board-main/src/middleware/error.middleware.js:76:19)
+    at Layer.handle [as handle_request] (C:\Users\HOME PRO\Desktop\African-AI-Talent-Board-main\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\HOME PRO\Desktop\African-AI-Talent-Board-main\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\HOME PRO\Desktop\African-AI-Talent-Board-main\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\HOME PRO\Desktop\African-AI-Talent-Board-main\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\HOME PRO\Desktop\African-AI-Talent-Board-main\node_modules\express\lib\router\index.js:280:10)
+    at file:///C:/Users/HOME%20PRO/Desktop/African-AI-Talent-Board-main/src/server.js:54:5
+    at Layer.handle [as handle_request] (C:\Users\HOME PRO\Desktop\African-AI-Talent-Board-main\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\HOME PRO\Desktop\African-AI-Talent-Board-main\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\HOME PRO\Desktop\African-AI-Talent-Board-main\node_modules\express\lib\router\index.js:286:9
