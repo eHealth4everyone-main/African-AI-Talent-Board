@@ -36,13 +36,16 @@ export const validateTalent = [
         .isEmail().withMessage('Valid email is required')
         .normalizeEmail(),
     body('skills')
-        .isArray({ min: 1 }).withMessage('At least one skill is required')
-        .custom((skills) => {
-            if (!skills.every(skill => typeof skill === 'string' && skill.trim().length > 0)) {
-                throw new Error('All skills must be non-empty strings');
-            }
-            return true;
-        }),
+    .isArray({ min: 1, max: 20 }).withMessage('Skills must be between 1 and 20')
+    .custom((skills) => {
+        if (!skills.every(skill => typeof skill === 'string' && skill.trim().length > 0)) {
+            throw new Error('All skills must be non-empty strings');
+        }
+        if (!skills.every(skill => skill.trim().length <= 50)) {
+            throw new Error('Each skill must not exceed 50 characters');
+        }
+        return true;
+    }),
     body('hourlyRate')
         .isFloat({ min: 0.01 }).withMessage('Valid hourly rate is required'),
     body('experienceLevel')
@@ -67,13 +70,16 @@ export const validateJob = [
         .notEmpty().withMessage('Description is required')
         .isLength({ min: 20, max: 5000 }).withMessage('Description must be 20-5000 characters'),
     body('requiredSkills')
-        .isArray({ min: 1 }).withMessage('At least one required skill is necessary')
-        .custom((skills) => {
-            if (!skills.every(skill => typeof skill === 'string' && skill.trim().length > 0)) {
-                throw new Error('All skills must be non-empty strings');
-            }
-            return true;
-        }),
+    .isArray({ min: 1, max: 20 }).withMessage('Required skills must be between 1 and 20')
+    .custom((skills) => {
+        if (!skills.every(skill => typeof skill === 'string' && skill.trim().length > 0)) {
+            throw new Error('All skills must be non-empty strings');
+        }
+        if (!skills.every(skill => skill.trim().length <= 50)) {
+            throw new Error('Each skill must not exceed 50 characters');
+        }
+        return true;
+    }),
     body('budgetMax')
         .isFloat({ min: 0.01 }).withMessage('Valid maximum budget is required'),
     body('preferredExperienceLevel')
