@@ -15,8 +15,10 @@ class TalentService {
         // Check if email already exists
         const existingTalent = await talentRepository.findByEmail(talentData.email);
         if (existingTalent) {
-            throw new Error('Talent with this email already exists');
-        }
+            const error = new Error('Talent with this email already exists');
+            error.statusCode = 409;
+            throw error;
+}
 
         // Normalize skills to lowercase for consistency
         const normalizedData = {
