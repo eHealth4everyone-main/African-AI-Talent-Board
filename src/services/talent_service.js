@@ -66,7 +66,9 @@ class TalentService {
         if (talentData.email && talentData.email !== existingTalent.email) {
             const emailExists = await talentRepository.findByEmail(talentData.email);
             if (emailExists) {
-                throw new Error('Email already in use');
+                const error = new Error('Email already in use');
+                error.statusCode = 409;
+                throw error;
             }
         }
 
