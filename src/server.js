@@ -19,6 +19,7 @@ dotenv.config();
 
 // Initialize Express app
 const app = express();
+app.set('trust proxy', 1);
 const PORT = process.env.PORT || 3000;
 const BASE_URL = process.env.BASE_URL || `http://localhost:${PORT}`;
 
