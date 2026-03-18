@@ -28,6 +28,7 @@ export const validateTalent = [
         .trim()
         .notEmpty().withMessage('Name is required')
         .isLength({ min: 2, max: 100 }).withMessage('Name must be 2-100 characters')
+        .matches(/^[a-zA-Z\s'-]+$/).withMessage('Name can only contain letters, spaces, hyphens and apostrophes')
         .escape(),
     body('email')
         .trim()
